@@ -35,6 +35,7 @@ export default {
     const kit = computed(() => kitStore.getters.getKit());
     const err = ref('');
     const recs = computed(() => autocompleteStore.getters.getKits());
+    
     const searchKit = async (label_id) => {
       try {
         await kitStore.dispatch('searchKit', label_id);
